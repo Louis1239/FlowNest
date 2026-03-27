@@ -1,35 +1,52 @@
 # FlowNest
 
-FlowNest is a UIKit container for pages that share a top header while each page owns its own vertical scroll view.
+FlowNest 是一个基于 UIKit 的容器组件，用来快速搭建“共享表头 + 顶部切换栏 + 多子列表联动滚动”的页面。
 
-It supports:
+它的目标很直接：
 
-- Shared header + sticky segment
-- Horizontal paging between child controllers
-- Nested parent/child scroll coordination
-- Built-in or custom segment view
-- Built-in or custom navigation bar view
-- Parent-level pull to refresh forwarded to the current child
+- 支持共享表头
+- 支持左右分页切换
+- 支持父子滚动联动
+- 支持内置导航栏，也支持自定义导航栏
+- 支持内置 Segment，也支持自定义 Segment
+- 支持自定义 HeaderView
+- 支持下拉刷新，并把刷新事件透传给当前子列表
+- 接入简单，只需要传入子控制器，并让子控制器遵循协议即可
 
-## Installation
+## 效果预览
+
+![FlowNest Preview](./Assets/preview.gif)
+
+## 功能特点
+
+- `HeaderView` 可自定义，适合个人主页、电商频道、内容聚合页等场景
+- `SegmentView` 可使用内置实现，也可以外部传入完全自定义的视图
+- `NavigationBarView` 可使用内置实现，也可以外部传入自定义导航栏
+- 父 `ScrollView` 和子列表滚动联动，滚动切换更自然
+- 支持点击切换和左右滑动切换分页
+- 支持父层下拉刷新，刷新动作转发给当前子列表处理
+
+## 安装
+
+### CocoaPods
 
 ```ruby
 pod 'FlowNest'
 ```
 
-Or use a Git tag directly before publishing to CocoaPods trunk:
+如果你在 CocoaPods 正式发布前使用 Git 仓库，也可以这样接入：
 
 ```ruby
-pod 'FlowNest', :git => 'https://github.com/Louis/FlowNest.git', :tag => '0.1.0'
+pod 'FlowNest', :git => 'https://github.com/Louis1239/FlowNest.git', :tag => '0.1.0'
 ```
 
-## Requirements
+## 环境要求
 
 - iOS 15.0+
 - UIKit
 - MJRefresh
 
-## Quick Start
+## 快速开始
 
 ```swift
 import UIKit
@@ -48,43 +65,111 @@ container.setViewControllers([
     secondViewController,
     thirdViewController
 ])
+
 navigationController?.pushViewController(container, animated: true)
 ```
 
-Each child controller must conform to `FlowNestChildProtocol`.
+## 接入方式
 
-If you want parent pull-to-refresh to trigger the current child, also conform to `FlowNestRefreshableChildProtocol`.
+FlowNest 的使用方式比较轻量，核心只需要两步：
 
-## Configuration
+1. 创建 `FlowNestContainerViewController`
+2. 传入子控制器数组
 
-`FlowNestConfig` currently exposes:
+每个子控制器只需要遵循 `FlowNestChildProtocol`，把内部实际用于联动的滚动视图暴露出来即可。
 
-- `navigationBarHeight`
-- `navigationBarTitle`
-- `showsNavigationBarBackButton`
-- `navigationBarBackButtonTitle`
-- `headerHeight`
-- `segmentHeight`
-- `maxOffset`
+```swift
+final class DemoListViewController: UIViewController, FlowNestChildProtocol {
+    let nestedScrollView: UIScrollView
+}
+```
 
-`maxOffset` is the parent/child scroll handoff threshold. When it is `0`, FlowNest falls back to `headerHeight`.
+如果你需要让父层下拉刷新触发当前子列表加载数据，再额外遵循 `FlowNestRefreshableChildProtocol`：
 
-## Customization
+```swift
+extension DemoListViewController: FlowNestRefreshableChildProtocol {
+    func flowNestHandleRefresh(completion: @escaping () -> Void) {
+        // 加载数据
+        completion()
+    }
+}
+```
 
-Pass a custom `segmentView` or `navigationBarView` when the built-in ones are not enough.
+## 配置说明
 
-If your custom segment needs to stay in sync with paging, conform it to `FlowNestSegmentContentProtocol`.
+`FlowNestConfig` 当前主要提供这些配置：
 
-## Example App
+- `navigationBarHeight`：内置导航栏高度，传 `0` 表示不显示
+- `navigationBarTitle`：内置导航栏标题
+- `showsNavigationBarBackButton`：是否显示内置返回按钮
+- `navigationBarBackButtonTitle`：内置返回按钮文案
+- `headerHeight`：共享表头高度
+- `segmentHeight`：切换栏高度
+- `maxOffset`：父子滚动切换阈值，传 `0` 时默认等于 `headerHeight`
 
-The example project includes four demos:
+## 自定义能力
 
-- No navigation bar + default segment
-- Built-in navigation bar + default segment
-- Built-in navigation bar + custom segment
-- Custom navigation bar + default segment
+### 自定义 Header
 
-To run the example:
+直接给 `headerView` 赋值即可：
+
+```swift
+container.headerView = customHeaderView
+```
+
+### 自定义 Segment
+
+如果你不传，FlowNest 会使用内置的 `FlowNestSegmentView`。
+
+如果你想自定义 Segment，可以直接传入自己的 `segmentView`。
+如果你的自定义 Segment 需要和分页状态联动，请遵循 `FlowNestSegmentContentProtocol`：
+
+```swift
+final class CustomSegmentView: UIView, FlowNestSegmentContentProtocol {
+    var titles: [String] = []
+    var selectedIndex: Int = 0
+    var onSelect: ((Int) -> Void)?
+}
+```
+
+### 自定义导航栏
+
+如果你不传，FlowNest 会使用内置的 `FlowNestNavigationView`。
+
+如果你想完全控制导航栏样式，可以直接传入：
+
+```swift
+container.navigationBarView = customNavigationBarView
+```
+
+## 示例工程
+
+当前 Example 内置了 4 个示例：
+
+- 无导航栏 + 默认 Segment
+- 内置导航栏 + 默认 Segment
+- 内置导航栏 + 自定义 Segment
+- 自定义导航栏 + 默认 Segment
+
+你可以在 README 中继续补充对应截图：
+
+### 1. 无导航栏 + 默认 Segment
+
+![Demo 1](./Assets/demo-no-navigation.png)
+
+### 2. 内置导航栏 + 默认 Segment
+
+![Demo 2](./Assets/demo-default-navigation.png)
+
+### 3. 内置导航栏 + 自定义 Segment
+
+![Demo 3](./Assets/demo-custom-segment.png)
+
+### 4. 自定义导航栏 + 默认 Segment
+
+![Demo 4](./Assets/demo-custom-navigation.png)
+
+运行 Example：
 
 ```bash
 cd Example
@@ -92,9 +177,18 @@ pod install
 open FlowNest.xcworkspace
 ```
 
+## 适用场景
+
+- 个人主页
+- 频道页
+- 电商首页
+- 社区内容页
+- 任何“顶部信息区域 + 多 tab 子列表”的页面
+
 ## Author
 
 Louis, 13032678708@163.com
+可以通过邮箱联系到我
 
 ## License
 
