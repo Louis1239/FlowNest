@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		048B585D2F768423005D728C /* DemoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B585C2F768423005D728C /* DemoListViewController.swift */; };
+		048B585F2F768424005D728C /* DemoCustomSegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B585E2F768424005D728C /* DemoCustomSegmentView.swift */; };
+		048B58612F768424005D728C /* NoNavigationDefaultSegmentDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B58602F768424005D728C /* NoNavigationDefaultSegmentDemoViewController.swift */; };
+		048B58632F768424005D728C /* NavigationDefaultSegmentDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B58622F768424005D728C /* NavigationDefaultSegmentDemoViewController.swift */; };
+		048B58652F768424005D728C /* NavigationCustomSegmentDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B58642F768424005D728C /* NavigationCustomSegmentDemoViewController.swift */; };
+		048B58682F7686C6005D728C /* DemoActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B58672F7686C6005D728C /* DemoActionButton.swift */; };
+		048B586A2F7686C7005D728C /* DemoNavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B58692F7686C7005D728C /* DemoNavigationBarView.swift */; };
+		048B586D2F768721005D728C /* NavigationCustomBarDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B586C2F768721005D728C /* NavigationCustomBarDemoViewController.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -28,6 +36,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		048B585C2F768423005D728C /* DemoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoListViewController.swift; sourceTree = "<group>"; };
+		048B585E2F768424005D728C /* DemoCustomSegmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoCustomSegmentView.swift; sourceTree = "<group>"; };
+		048B58602F768424005D728C /* NoNavigationDefaultSegmentDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoNavigationDefaultSegmentDemoViewController.swift; sourceTree = "<group>"; };
+		048B58622F768424005D728C /* NavigationDefaultSegmentDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDefaultSegmentDemoViewController.swift; sourceTree = "<group>"; };
+		048B58642F768424005D728C /* NavigationCustomSegmentDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationCustomSegmentDemoViewController.swift; sourceTree = "<group>"; };
+		048B58672F7686C6005D728C /* DemoActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoActionButton.swift; sourceTree = "<group>"; };
+		048B58692F7686C7005D728C /* DemoNavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoNavigationBarView.swift; sourceTree = "<group>"; };
+		048B586C2F768721005D728C /* NavigationCustomBarDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationCustomBarDemoViewController.swift; sourceTree = "<group>"; };
 		11B87205F1C9E66DA48B28ED /* Pods-FlowNest_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowNest_Example.debug.xcconfig"; path = "Target Support Files/Pods-FlowNest_Example/Pods-FlowNest_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		2C5DBF58C287B87B4DE80C55 /* Pods_FlowNest_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlowNest_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C62346D587126D0BA1C9A0E /* Pods_FlowNest_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlowNest_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,9 +59,9 @@
 		607FACE51AFB9204008FA782 /* FlowNest_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlowNest_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		8174E2C6D12EC7244D9B0BA5 /* FlowNest.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = FlowNest.podspec; path = ../FlowNest.podspec; sourceTree = "<group>"; };
-		AD8A61D4752393BF557EB2BA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		BBEE3D2E2099F4B718395C89 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		8174E2C6D12EC7244D9B0BA5 /* FlowNest.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = FlowNest.podspec; path = ../FlowNest.podspec; sourceTree = "<group>"; };
+		AD8A61D4752393BF557EB2BA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		BBEE3D2E2099F4B718395C89 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		E615DE4FE766AA395F7D21FC /* Pods-FlowNest_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowNest_Tests.release.xcconfig"; path = "Target Support Files/Pods-FlowNest_Tests/Pods-FlowNest_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,6 +85,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		048B58572F76832A005D728C /* Demos */ = {
+			isa = PBXGroup;
+			children = (
+				048B58582F76833F005D728C /* Common */,
+				048B58592F76833F005D728C /* NoNavigationDefaultSegment */,
+				048B585A2F76833F005D728C /* NavigationDefaultSegment */,
+				048B585B2F76833F005D728C /* NavigationCustomSegment */,
+			);
+			path = Demos;
+			sourceTree = "<group>";
+		};
+		048B58582F76833F005D728C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				048B585C2F768423005D728C /* DemoListViewController.swift */,
+				048B585E2F768424005D728C /* DemoCustomSegmentView.swift */,
+				048B58672F7686C6005D728C /* DemoActionButton.swift */,
+				048B58692F7686C7005D728C /* DemoNavigationBarView.swift */,
+				048B586C2F768721005D728C /* NavigationCustomBarDemoViewController.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		048B58592F76833F005D728C /* NoNavigationDefaultSegment */ = {
+			isa = PBXGroup;
+			children = (
+				048B58602F768424005D728C /* NoNavigationDefaultSegmentDemoViewController.swift */,
+			);
+			path = NoNavigationDefaultSegment;
+			sourceTree = "<group>";
+		};
+		048B585A2F76833F005D728C /* NavigationDefaultSegment */ = {
+			isa = PBXGroup;
+			children = (
+				048B58622F768424005D728C /* NavigationDefaultSegmentDemoViewController.swift */,
+			);
+			path = NavigationDefaultSegment;
+			sourceTree = "<group>";
+		};
+		048B585B2F76833F005D728C /* NavigationCustomSegment */ = {
+			isa = PBXGroup;
+			children = (
+				048B58642F768424005D728C /* NavigationCustomSegmentDemoViewController.swift */,
+			);
+			path = NavigationCustomSegment;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +162,7 @@
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				048B58572F76832A005D728C /* Demos */,
 			);
 			name = "Example for FlowNest";
 			path = FlowNest;
@@ -147,7 +211,6 @@
 				55505024221EF686AC3282F8 /* Pods-FlowNest_Tests.debug.xcconfig */,
 				E615DE4FE766AA395F7D21FC /* Pods-FlowNest_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -213,10 +276,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = XQ2HT2BLGA;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = XQ2HT2BLGA;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -227,6 +292,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -292,10 +358,12 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-FlowNest_Example/Pods-FlowNest_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/FlowNest/FlowNest.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FlowNest.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -331,8 +399,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				048B58682F7686C6005D728C /* DemoActionButton.swift in Sources */,
+				048B58612F768424005D728C /* NoNavigationDefaultSegmentDemoViewController.swift in Sources */,
+				048B58632F768424005D728C /* NavigationDefaultSegmentDemoViewController.swift in Sources */,
+				048B585F2F768424005D728C /* DemoCustomSegmentView.swift in Sources */,
+				048B58652F768424005D728C /* NavigationCustomSegmentDemoViewController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				048B586D2F768721005D728C /* NavigationCustomBarDemoViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				048B586A2F7686C7005D728C /* DemoNavigationBarView.swift in Sources */,
+				048B585D2F768423005D728C /* DemoListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,7 +554,9 @@
 			baseConfigurationReference = 11B87205F1C9E66DA48B28ED /* Pods-FlowNest_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = XQ2HT2BLGA;
 				INFOPLIST_FILE = FlowNest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -493,7 +571,9 @@
 			baseConfigurationReference = 6039B397A27D80D9CAA4B490 /* Pods-FlowNest_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = XQ2HT2BLGA;
 				INFOPLIST_FILE = FlowNest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -507,6 +587,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 55505024221EF686AC3282F8 /* Pods-FlowNest_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = XQ2HT2BLGA;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -516,6 +597,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -529,11 +611,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E615DE4FE766AA395F7D21FC /* Pods-FlowNest_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = XQ2HT2BLGA;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";

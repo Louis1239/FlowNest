@@ -1,0 +1,23 @@
+PODS:
+  - FlowNest (0.1.0):
+    - MJRefresh
+  - MJRefresh (3.7.6)
+
+DEPENDENCIES:
+  - FlowNest (from `../FlowNest.podspec`)
+
+SPEC REPOS:
+  trunk:
+    - MJRefresh
+
+EXTERNAL SOURCES:
+  FlowNest:
+    :path: "../FlowNest.podspec"
+
+SPEC CHECKSUMS:
+  FlowNest: ac219f58b4595d6f9b6848e65bc5bf769735384d
+  MJRefresh: 2fe7fb43a5167ceda20bb7e63f130c04fd1814a5
+
+PODFILE CHECKSUM: 42105398b6a035d01724cdf00dfdf8478f9ab55a
+
+COCOAPODS: 1.16.2

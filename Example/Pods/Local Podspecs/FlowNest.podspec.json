@@ -1,0 +1,27 @@
+{
+  "name": "FlowNest",
+  "version": "0.1.0",
+  "summary": "Shared header container with horizontally paged child scroll views.",
+  "description": "FlowNest provides a container controller for a shared header and multiple child\nscroll views with coordinated nested scrolling behavior.",
+  "homepage": "https://github.com/Louis/FlowNest",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Louis": "13032678708@163.com"
+  },
+  "source": {
+    "git": "https://github.com/Louis/FlowNest.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.3"
+  },
+  "source_files": "FlowNest/Classes/**/*.{swift}",
+  "dependencies": {
+    "MJRefresh": [
+
+    ]
+  }
+}
