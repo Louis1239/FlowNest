@@ -142,30 +142,24 @@ container.navigationBarView = customNavigationBarView
 
 ## 示例工程
 
-当前 Example 内置了 4 个示例：
+当前 Example 内置了 3 个示例：
 
-- 无导航栏 + 默认 Segment
 - 内置导航栏 + 默认 Segment
 - 内置导航栏 + 自定义 Segment
 - 自定义导航栏 + 默认 Segment
 
-你可以在 README 中继续补充对应截图：
 
-### 1. 无导航栏 + 默认 Segment
+### 1. 内置导航栏 + 默认 Segment
 
-![Demo 1](./Assets/demo-no-navigation.png)
+![Demo 1](./Assets/demo-default.png)
 
-### 2. 内置导航栏 + 默认 Segment
+### 2. 内置导航栏 + 自定义 Segment
 
-![Demo 2](./Assets/demo-default-navigation.png)
+![Demo 2](./Assets/demo-custom-segment.png)
 
-### 3. 内置导航栏 + 自定义 Segment
+### 3. 自定义导航栏 + 默认 Segment
 
-![Demo 3](./Assets/demo-custom-segment.png)
-
-### 4. 自定义导航栏 + 默认 Segment
-
-![Demo 4](./Assets/demo-custom-navigation.png)
+![Demo 3](./Assets/demo-custom-navigation.png)
 
 运行 Example：
 
