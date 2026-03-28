@@ -2,8 +2,6 @@
 
 FlowNest 是一个基于 UIKit 的容器组件，用来快速搭建“共享表头 + 顶部切换栏 + 多子列表联动滚动”的页面。
 
-它的目标很直接：
-
 - 支持共享表头
 - 支持左右分页切换
 - 支持父子滚动联动
@@ -155,19 +153,19 @@ container.navigationBarView = customNavigationBarView
 
 ### 1. 无导航栏 + 默认 Segment
 
-![Demo 1](./Assets/demo-no-navigation.png)
+![Demo 1](./Assets/demo-no-navigation.PNG)
 
 ### 2. 内置导航栏 + 默认 Segment
 
-![Demo 2](./Assets/demo-default-navigation.png)
+![Demo 2](./Assets/demo-default-navigation.PNG)
 
 ### 3. 内置导航栏 + 自定义 Segment
 
-![Demo 3](./Assets/demo-custom-segment.png)
+![Demo 3](./Assets/demo-custom-segment.PNG)
 
 ### 4. 自定义导航栏 + 默认 Segment
 
-![Demo 4](./Assets/demo-custom-navigation.png)
+![Demo 4](./Assets/demo-custom-navigation.PNG)
 
 运行 Example：
 
