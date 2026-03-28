@@ -4,6 +4,7 @@ platform :ios, '15.0'
 
 target 'FlowNest_Example' do
   pod 'FlowNest', :path => '../FlowNest.podspec'
+  pod 'SnapKit'
 
   target 'FlowNest_Tests' do
     inherit! :search_paths

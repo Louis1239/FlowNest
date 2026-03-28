@@ -9,13 +9,9 @@ import UIKit
 
 final class DemoNavigationBarView: UIView {
     
-    var onBack: (() -> Void)? {
-        didSet {
-            backButton.onTap = onBack
-        }
-    }
+    var onBack: (() -> Void)?
     
-    private let backButton = DemoActionButton(type: .custom)
+    private let backButton = UIButton(type: .custom)
     private let titleLabel = UILabel()
     private let subtitleLabel = UILabel()
     
@@ -36,12 +32,15 @@ final class DemoNavigationBarView: UIView {
     }
     
     private func setupUI(title: String, subtitle: String) {
-        backgroundColor = UIColor(red: 0.12, green: 0.17, blue: 0.24, alpha: 1.0)
+        backgroundColor = .black
         
         backButton.setTitle("返回", for: .normal)
+        backButton.setImage(UIImage(systemName: "chevron.backward"), for: .normal)
+        backButton.tintColor = .white
         backButton.setTitleColor(.white, for: .normal)
         backButton.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .medium)
         backButton.contentHorizontalAlignment = .left
+        backButton.addTarget(self, action: #selector(onBackAction), for: .touchUpInside)
         addSubview(backButton)
         
         titleLabel.text = title
@@ -54,4 +53,9 @@ final class DemoNavigationBarView: UIView {
         subtitleLabel.font = UIFont.systemFont(ofSize: 12, weight: .medium)
         addSubview(subtitleLabel)
     }
+    
+    @objc private func onBackAction() {
+        onBack?()
+    }
+    
 }

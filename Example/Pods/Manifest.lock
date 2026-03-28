@@ -2,22 +2,26 @@ PODS:
   - FlowNest (0.1.0):
     - MJRefresh
   - MJRefresh (3.7.6)
+  - SnapKit (5.7.1)
 
 DEPENDENCIES:
   - FlowNest (from `../FlowNest.podspec`)
+  - SnapKit
 
 SPEC REPOS:
   trunk:
     - MJRefresh
+    - SnapKit
 
 EXTERNAL SOURCES:
   FlowNest:
     :path: "../FlowNest.podspec"
 
 SPEC CHECKSUMS:
-  FlowNest: ac219f58b4595d6f9b6848e65bc5bf769735384d
+  FlowNest: 1a9c2358752a7d8758a149bc0e842b4d6836f66a
   MJRefresh: 2fe7fb43a5167ceda20bb7e63f130c04fd1814a5
+  SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
 
-PODFILE CHECKSUM: 42105398b6a035d01724cdf00dfdf8478f9ab55a
+PODFILE CHECKSUM: 43fcbab3e137ccd062a3151fc36306dbd74d11a6
 
 COCOAPODS: 1.16.2
