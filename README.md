@@ -21,6 +21,10 @@
 
 仓库地址：`https://github.com/Louis1239/FlowNest`
 
+## 效果预览
+
+![FlowNest Preview](./Assets/preview.gif)
+
 ## 仓库介绍
 
 `FlowNest` 是一个基于 UIKit 的容器组件，用来快速搭建“共享表头 + 顶部切换栏 + 多子列表联动滚动”的页面。它的核心思路比较直接：由容器统一管理外层滚动、分页切换和顶部区域布局，业务侧只需要提供 Header、可选的导航栏、可选的 Segment，以及真正承载内容的子控制器。
@@ -184,6 +188,8 @@ extension DemoRecommendViewController: FlowNestRefreshableChildProtocol {
 
 #### 示例一：有导航栏 + 默认 Segment
 
+![Demo 1](./Assets/demo-default.png)
+
 这是最适合第一次接入的方式。你只需要配置容器内导航栏，提供一个 Header，再交给容器一组子控制器即可。导航栏和 Segment 都直接使用组件默认实现，业务侧最省心。
 
 这种模式适合：
@@ -195,6 +201,8 @@ extension DemoRecommendViewController: FlowNestRefreshableChildProtocol {
 如果你的页面是“频道首页”“内容分发页”“简单个人主页”，通常都可以先从这个模式起步。
 
 #### 示例二：有导航栏 + 自定义 Segment
+
+![Demo 2](./Assets/demo-custom-segment.png)
 
 当默认 Segment 不够用时，可以保留容器内导航栏不动，只替换 Segment。比如你希望选中态更明显、交互更品牌化，或者要做胶囊式、卡片式、特殊动效的切换栏，这种方式就更合适。
 
@@ -208,6 +216,8 @@ extension DemoRecommendViewController: FlowNestRefreshableChildProtocol {
 - 需要品牌化视觉的内容入口页。
 
 #### 示例三：自定义导航栏 + 默认 Segment
+
+![Demo 3](./Assets/demo-custom-navigation.png)
 
 如果你的页面需要一个强业务感的导航栏，比如顶部不只是标题，还要放副标题、返回按钮、状态信息，甚至后续还要扩展搜索、筛选、运营入口，那么就可以把导航栏也交给业务侧自己实现。
 
